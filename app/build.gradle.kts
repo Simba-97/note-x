@@ -98,6 +98,7 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:${LibVersion.navigationComposeVersion}")
     implementation("androidx.datastore:datastore-preferences:${LibVersion.dataStoreVersion}")
     implementation("androidx.paging:paging-compose:1.0.0-alpha16")
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
     // DO NOT upgrade desugar_jdk_libs to 1.2.0
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.6")
 
@@ -105,6 +106,7 @@ dependencies {
     implementation("com.google.dagger:hilt-android:${rootProject.extra["hiltVersion"]}")
     kapt("com.google.dagger:hilt-android-compiler:${rootProject.extra["hiltVersion"]}")
 
+    implementation("androidx.room:room-runtime:${LibVersion.roomVersion}")
     implementation("androidx.room:room-ktx:${LibVersion.roomVersion}")
     implementation("androidx.room:room-paging:${LibVersion.roomVersion}")
     kapt("androidx.room:room-compiler:${LibVersion.roomVersion}")
@@ -133,4 +135,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:${LibVersion.composeVersion}")
     debugImplementation("androidx.compose.ui:ui-tooling:${LibVersion.composeVersion}")
     debugImplementation("androidx.compose.ui:ui-test-manifest:${LibVersion.composeVersion}")
+
+    implementation("androidx.hilt:hilt-work:1.0.0")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
 }

@@ -50,7 +50,8 @@ fun NoteCard(note: Note) {
                         content = "Succeed", Modifier.padding(end = 8.dp)
                     )
                     Divider(
-                        color = Color.Gray, modifier = Modifier
+                        color = Color.Gray,
+                        modifier = Modifier
                             .fillMaxHeight()
                             .width(1.dp)
                     )
@@ -59,7 +60,8 @@ fun NoteCard(note: Note) {
                 Row(
                     Modifier
                         .fillMaxWidth()
-                        .weight(1f), horizontalArrangement = Arrangement.End
+                        .weight(1f),
+                    horizontalArrangement = Arrangement.End
                 ) {
                     TextSemiBold(
                         content = InstantConverter.getLocalDate(note.createdOn).toString()
@@ -69,7 +71,6 @@ fun NoteCard(note: Note) {
             }
         }
     }
-
 }
 
 @Preview
